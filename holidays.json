@@ -1,0 +1,43 @@
+{
+  "IN": [
+    { "date": "2026-01-26", "name": "Republic Day", "localName": "गणतंत्र दिवस", "public": true, "types": ["Public"] },
+    { "date": "2026-03-17", "name": "Holi", "localName": "होली", "public": true, "types": ["Public"] },
+    { "date": "2026-04-03", "name": "Good Friday", "localName": "गुड फ्राइडे", "public": true, "types": ["Public"] },
+    { "date": "2026-04-14", "name": "Dr. Ambedkar Jayanti", "localName": "डॉ. अम्बेडकर जयंती", "public": true, "types": ["Public"] },
+    { "date": "2026-05-01", "name": "Labour Day", "localName": "मजदूर दिवस", "public": true, "types": ["Public"] },
+    { "date": "2026-08-15", "name": "Independence Day", "localName": "स्वतंत्रता दिवस", "public": true, "types": ["Public"] },
+    { "date": "2026-10-02", "name": "Gandhi Jayanti", "localName": "गांधी जयंती", "public": true, "types": ["Public"] },
+    { "date": "2026-10-20", "name": "Diwali", "localName": "दीपावली", "public": true, "types": ["Public"] },
+    { "date": "2026-11-05", "name": "Guru Nanak Jayanti", "localName": "गुरु नानक जयंती", "public": true, "types": ["Public"] },
+    { "date": "2026-12-25", "name": "Christmas Day", "localName": "क्रिसमस", "public": true, "types": ["Public"] }
+  ],
+  "US": [
+    { "date": "2026-01-01", "name": "New Year's Day", "localName": "New Year's Day", "public": true, "types": ["Public"] },
+    { "date": "2026-01-19", "name": "Martin Luther King Jr. Day", "localName": "Martin Luther King Jr. Day", "public": true, "types": ["Public"] },
+    { "date": "2026-02-16", "name": "Presidents' Day", "localName": "Presidents' Day", "public": true, "types": ["Public"] },
+    { "date": "2026-05-25", "name": "Memorial Day", "localName": "Memorial Day", "public": true, "types": ["Public"] },
+    { "date": "2026-07-04", "name": "Independence Day", "localName": "Independence Day", "public": true, "types": ["Public"] },
+    { "date": "2026-09-07", "name": "Labor Day", "localName": "Labor Day", "public": true, "types": ["Public"] },
+    { "date": "2026-11-26", "name": "Thanksgiving Day", "localName": "Thanksgiving Day", "public": true, "types": ["Public"] },
+    { "date": "2026-12-25", "name": "Christmas Day", "localName": "Christmas Day", "public": true, "types": ["Public"] }
+  ],
+  "GB": [
+    { "date": "2026-01-01", "name": "New Year's Day", "localName": "New Year's Day", "public": true, "types": ["Public"] },
+    { "date": "2026-04-03", "name": "Good Friday", "localName": "Good Friday", "public": true, "types": ["Public"] },
+    { "date": "2026-04-06", "name": "Easter Monday", "localName": "Easter Monday", "public": true, "types": ["Public"] },
+    { "date": "2026-05-04", "name": "Early May Bank Holiday", "localName": "Early May Bank Holiday", "public": true, "types": ["Public"] },
+    { "date": "2026-05-25", "name": "Spring Bank Holiday", "localName": "Spring Bank Holiday", "public": true, "types": ["Public"] },
+    { "date": "2026-08-31", "name": "Summer Bank Holiday", "localName": "Summer Bank Holiday", "public": true, "types": ["Public"] },
+    { "date": "2026-12-25", "name": "Christmas Day", "localName": "Christmas Day", "public": true, "types": ["Public"] },
+    { "date": "2026-12-28", "name": "Boxing Day", "localName": "Boxing Day", "public": true, "types": ["Public"] }
+  ],
+  "DE": [
+    { "date": "2026-01-01", "name": "New Year's Day", "localName": "Neujahr", "public": true, "types": ["Public"] },
+    { "date": "2026-04-03", "name": "Good Friday", "localName": "Karfreitag", "public": true, "types": ["Public"] },
+    { "date": "2026-04-06", "name": "Easter Monday", "localName": "Ostermontag", "public": true, "types": ["Public"] },
+    { "date": "2026-05-01", "name": "Labour Day", "localName": "Tag der Arbeit", "public": true, "types": ["Public"] },
+    { "date": "2026-10-03", "name": "German Unity Day", "localName": "Tag der Deutschen Einheit", "public": true, "types": ["Public"] },
+    { "date": "2026-12-25", "name": "Christmas Day", "localName": "Erster Weihnachtstag", "public": true, "types": ["Public"] },
+    { "date": "2026-12-26", "name": "St. Stephen's Day", "localName": "Zweiter Weihnachtstag", "public": true, "types": ["Public"] }
+  ]
+}
