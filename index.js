@@ -14,8 +14,20 @@ app.get("/holidays", (req, res) => {
 
     const countryHolidays = holidays[country];
 
+    if (country.length !== 2) {
+    return res.status(400).json({ error: "Country code must be 2 letters e.g. IN, US, GB" });
+    }
+
     if (!countryHolidays) {
-        return res.json({ error: "Country not found" });
+        return res.status(400).json({ error: "Country not found" });
+    }
+
+    if (month && isNaN(parseInt(month))) {
+    return res.status(400).json({ error: "Month must be a number between 1 and 12" });
+    }
+
+    if (month && (parseInt(month) < 1 || parseInt(month) > 12)) {
+    return res.status(400).json({ error: "Month must be between 1 and 12" });
     }
 
     if (month) {
