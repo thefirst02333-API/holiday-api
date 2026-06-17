@@ -1,6 +1,30 @@
+require("dotenv").config();
 const express = require("express");
 const app = express();
 const fs = require("fs");
+const rateLimit = require("express-rate-limit");
+
+const limiter = rateLimit({
+    windowMs: 60 * 60 * 1000,
+    max: 100,
+    message: { error: "Too many requests, please try again later" }
+});
+
+const apiKeys = process.env.API_KEYS.split(",");
+
+const validateApiKey = (req, res, next) => {
+    const key = req.headers["x-api-key"];
+    
+    if (!key || !apiKeys.includes(key)) {
+        return res.status(401).json({ error: "Invalid or missing API key" });
+    }
+    
+    next();
+};
+
+app.use(validateApiKey);
+
+app.use(limiter);
 const data = fs.readFileSync("holidays.json", "utf8");
 const holidays = JSON.parse(data);
 
