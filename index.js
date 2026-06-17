@@ -28,6 +28,10 @@ app.use(limiter);
 const data = fs.readFileSync("holidays.json", "utf8");
 const holidays = JSON.parse(data);
 
+app.get("/", (req, res) => {
+    res.json({ status: "ok", message: "Holiday API is running" });
+});
+
 app.get("/holidays", (req, res) => {
     const country = req.query.country;
     const month = req.query.month;
@@ -66,6 +70,7 @@ app.get("/holidays", (req, res) => {
     res.json(countryHolidays);
 });
 
-app.listen(3000, () => {
-    console.log("Holiday API is running on port 3000");
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Holiday API is running on port ${PORT}`);
 });
