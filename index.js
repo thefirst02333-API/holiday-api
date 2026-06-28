@@ -1,4 +1,4 @@
-require("dotenv").config();
+require("dotenv").config();console.log("DEBUG API_KEYS:", process.env.API_KEYS);
 const express = require("express");
 const app = express();
 const fs = require("fs");
