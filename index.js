@@ -41,7 +41,7 @@ app.get("/holidays", (req, res) => {
         return res.json({ error: "Please provide a country code e.g. ?country=IN" });
     }
 
-    const countryHolidays = holidays[country];
+   const countryHolidays = holidays[country ? country.toUpperCase() : country];
 
     if (country.length !== 2) {
     return res.status(400).json({ error: "Country code must be 2 letters e.g. IN, US, GB" });
