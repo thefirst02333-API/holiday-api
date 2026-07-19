@@ -48,7 +48,7 @@ app.get("/holidays", (req, res) => {
     }
 
     if (!countryHolidays) {
-        return res.status(400).json({ error: "Country not found" });
+        return res.status(404).json({ error: "Country not found" });
     }
 
     if (month && isNaN(parseInt(month))) {
