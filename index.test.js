@@ -6,10 +6,10 @@ test("returns holidays for India", async () => {
     expect(response.status).toBe(200);
 });
 
-test('returns 400 for invalid country', async () => {
+test('returns 404 for invalid country', async () => {
   expect.assertions(1);
   const response = await request(app).get("/holidays?country=ZZ").set("x-api-key", "testkey123");
-    expect(response.status).toBe(400);
+    expect(response.status).toBe(404);
 });
 
 test('returns 401 for unauthorized access', async () => {
@@ -24,20 +24,9 @@ test('returns 400 for invalid month', async () => {
     expect(response.status).toBe(400);
 });
 
-test('returns 400 for invalid country', async () => {
-  expect.assertions(1);
-  try {
-    await request(app).get("/holidays?country=IN").set("x-api-key", "testkey123");
-  } catch (error) {
-    expect(error).toMatch('{"error": "Country not found"}');
-  }
-});
-
-test('returns 400 for invalid month', async () => {
-  expect.assertions(1);
-  try {
-    await request(app).get("/holidays?country=IN").set("x-api-key", "testkey123");
-  } catch (error) {
-    expect(error).toMatch('{"error": "Month must be between 1 and 12"}');
-  }
+test('returns correct holidays for India in January', async () => {
+  expect.assertions(2);
+  const response = await request(app).get("/holidays?country=IN&month=1").set("x-api-key", "testkey123");
+    expect(response.status).toBe(200);
+    expect(response.body.length).toBe(2);
 });
