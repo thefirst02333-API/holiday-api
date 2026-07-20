@@ -1,5 +1,4 @@
 require("dotenv").config();
-console.log("DEBUG API_KEYS:", process.env.API_KEYS);
 const express = require("express");
 const app = express();
 const fs = require("fs");
@@ -23,7 +22,6 @@ const validateApiKey = (req, res, next) => {
     next();
 };
 
-app.use(validateApiKey);
 
 app.use(limiter);
 const data = fs.readFileSync("holidays.json", "utf8");
@@ -33,7 +31,7 @@ app.get("/", (req, res) => {
     res.json({ status: "ok", message: "Holiday API is running" });
 });
 
-app.get("/holidays", (req, res) => {
+app.get("/holidays", validateApiKey, (req, res) => {
     const country = req.query.country;
     const month = req.query.month;
 
